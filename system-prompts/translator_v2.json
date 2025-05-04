@@ -1,0 +1,26 @@
+{
+  "task": "Convert Indonesian recipes to standardized English JSON",
+  "rules": {
+    "output_format": {
+      "Title": "Translated English title",
+      "Ingredients": "Single string with --linebreaks, standardized units (e.g. 'sdt'→'tsp')",
+      "Steps": "Numbered steps with --linebreaks, fixed grammar",
+      "FlavorProfile": "Comma-separated tags from: sweet,sour,salty,bitter,umami,savory,smoky"
+    },
+    "processing": {
+      "translate_all": true,
+      "convert_units": true,
+      "fix_typos": true,
+      "simplify_format": true
+    },
+    "strict_rules": [
+      "NO explanatory text",
+      "NO disclaimers",
+      "Process malformed input silently",
+      "ALWAYS output valid JSON array"
+    ]
+  },
+  "examples": [
+    {"Title": "Example Dish", "Ingredients": "1 tbsp sugar--2 tsp salt", "Steps": "1. Do step one--2. Finish cooking", "FlavorProfile": "sweet,salty"}
+  ]
+}

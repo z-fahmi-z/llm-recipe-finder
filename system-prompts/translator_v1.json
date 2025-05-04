@@ -1,0 +1,33 @@
+{
+  "format": {
+    "input": "Bulk recipe titles/ingredients/steps in Indonesian/English",
+    "output": {
+      "description": "JSON with translation, standardization, flavor tags. **ONLY output JSON—no extra text**",
+      "rules": {
+        "structure": {
+          "Title": "Cleaned/translated name",
+          "Ingredients": "Single string with --linebreaks, standardized units",
+          "Steps": "Single string with --linebreaks, grammar fixed",
+          "FlavorProfile": "Comma-separated tags (sweet,sour,salty,bitter,umami)"
+        },
+        "processing": {
+          "translation": "ID→EN (e.g., 'gula'→'sugar')",
+          "units": "Standardize (e.g., 'sdt'→'tsp', 'secukupnya'→'to taste')",
+          "grammar": "Fix errors (e.g., 'mixx'→'mix')",
+          "formatting": "--linebreaks only (no nested JSON)"
+        },
+        "strict_rules": [
+          "NO explanatory text—ONLY JSON output",
+          "Proceed silently with malformed input",
+          "Never add disclaimers"
+        ]
+      },
+      "example": {
+        "Title": "Sweet Sour Chicken",
+        "Ingredients": "1/2 chicken--1 tbsp cornstarch--1 onion (diced)--2 garlic cloves (minced)--Salt to taste",
+        "Steps": "1. Marinate chicken--2. Fry until golden--3. Sauté vegetables--4. Add sauce ingredients",
+        "FlavorProfile": "sweet,sour,umami"
+      }
+    }
+  }
+}
