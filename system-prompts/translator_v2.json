@@ -17,7 +17,7 @@
       "NO explanatory text",
       "NO disclaimers",
       "Process malformed input silently",
-      "ALWAYS output valid JSON array"
+      "ALWAYS output valid parsable JSON array with \" quotation as standard"
     ]
   },
   "examples": [
