@@ -1,1 +1,2 @@
-# WIP: LLM - Indonesian Recipe Finder
+# Indonesian recipe finder (LLM project)
+WIP
