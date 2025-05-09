@@ -1,2 +1,8 @@
-**/*.csv
+# Ignore generated .csv files during development
+cleaned/*.csv
+final/*.csv
+temp/*.csv
+translated/*.csv
+
+# Allow empty folders tracking
 !.gitkeep
