@@ -1,4 +1,2 @@
-cleaned/*.csv
-final/*.csv
-temp/*.csv
-translated/*.csv
+**/*.csv
+!.gitkeep
