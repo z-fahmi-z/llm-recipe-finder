@@ -1,2 +1,2 @@
 # Indonesian Recipe Finder (LLM project)
-WIP
+WIP: About, Requirements, Guide, Toolings
