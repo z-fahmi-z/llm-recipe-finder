@@ -1,1 +1,4 @@
-**/*.csv
+cleaned/*.csv
+final/*.csv
+temp/*.csv
+translated/*.csv
