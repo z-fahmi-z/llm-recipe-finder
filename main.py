@@ -29,6 +29,8 @@ def find_recipe(query, top_k=10) -> pd.DataFrame:
     return indonesian_recipes[indonesian_recipes["Title"].isin(found_recipes)].head(top_k)
 
 def get_recipe(query):
+    if query.strip() == "" or query is None:
+        return gr.update(value="")
     recipes = find_recipe(query)
     recipe_details = []
     for recipe in recipes.itertuples():
