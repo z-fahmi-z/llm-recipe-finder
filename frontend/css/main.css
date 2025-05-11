@@ -21,6 +21,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
     margin: 1% !important;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .recipe-image {
