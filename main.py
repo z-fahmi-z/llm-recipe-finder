@@ -31,7 +31,7 @@ def find_recipe(query, top_k=10) -> pd.DataFrame:
 def get_recipe(query):
     if query.strip() == "" or query is None:
         return gr.update(value="")
-    recipes = find_recipe(query)
+    recipes = find_recipe(query, 12)
     recipe_details = []
     for recipe in recipes.itertuples():
         title = recipe.Title.title()
