@@ -1,2 +1,2 @@
-# Indonesian Recipe Finder (LLM project)
-WIP: About, Requirements, Guide, Toolings
+# Indonesian Recipe Finder
+A recipe finder powered by open-sourced LLMs 
