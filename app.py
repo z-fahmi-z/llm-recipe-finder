@@ -33,9 +33,11 @@ def get_recipe(query):
         return gr.update(value="")
     recipes = find_recipe(query, 12)
     recipe_details = []
-    for recipe in recipes.itertuples():
-        title = recipe.Title.title()
-        descriptions = f"{title}"
+    for index, recipe in recipes.iterrows():
+        title = recipe["Title"].title()
+        ingredients = recipe["Ingredients"].replace("--", "<br/>")
+        steps = recipe["Steps"].replace("--", "<br/>")
+        descriptions = [index, title, ingredients, steps]
         recipe_details.append(descriptions)
     return html_recipe_cards(recipe_details)
 
@@ -43,7 +45,12 @@ def html_recipe_cards(descriptions):
     html_card_container = card_container
     html_cards = ""
     for description in descriptions:
-        html_cards += card.format(title=description)
+        html_cards += card.format(
+            id = description[0],
+            title = description[1],
+            ingredients = description[2],
+            steps = description[3]
+        )
     html_card_container = html_card_container.format(cards=html_cards)
     return gr.update(value=html_card_container)
 
