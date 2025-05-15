@@ -16,7 +16,7 @@ card_container = """
 """
 
 card = """
-<div id={id} class="recipe-card" onclick="testFn()">
+<div id={id} class="recipe-card" onclick="callPopUp()">
     <div class="recipe-image">
         Image
     </div>
