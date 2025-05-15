@@ -2,7 +2,9 @@
 A recipe finder powered by open-sourced LLMs 
 
 Your can find the full project summary regarding the challenges and solutions here:
+
 📄 [Project Summary](summary.md)
+
 ---
 ### 🧭 Guide
 
