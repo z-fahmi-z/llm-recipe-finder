@@ -21,7 +21,9 @@ card = """
         Image
     </div>
     <div class="recipe-content">
-        <div class="recipe-title">{title}</div>
+        <div class="recipe-title">{title}</div> 
+        <div class="recipe-ingredients">{ingredients}</div> 
+        <div class="recipe-steps">{steps}</div> 
     </div>
 </div>
 """
