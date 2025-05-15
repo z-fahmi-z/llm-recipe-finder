@@ -1,15 +1,17 @@
 from helpers.db_vector_search import load_db
 from pathlib import Path
 from frontend.components import card_container, card
+from frontend.js.script import js
 
 import gradio as gr
 import pandas as pd
 
+css = Path("./frontend/css/main.css").read_text(encoding="utf=8")
+csv_path = "./csv/final/indonesian_recipes.csv"
+
 db_path = "./vector-db"
 document_path = f"{db_path}/recipe_document.txt"
 separator = "\n"
-
-csv_path = "./csv/final/indonesian_recipes.csv"
 
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
 db = load_db(
@@ -54,12 +56,11 @@ def html_recipe_cards(descriptions):
     html_card_container = html_card_container.format(cards=html_cards)
     return gr.update(value=html_card_container)
 
-css = Path("./frontend/css/main.css").read_text()
-
 with gr.Blocks(
     title="Dashboard",
     theme="soft",
-    css=css
+    css=css,
+    js=js
 ) as dashboard:
     with gr.Column():
         with gr.Column():
@@ -69,7 +70,6 @@ with gr.Blocks(
             search_button = gr.Button("Search")
         with gr.Row():
             outputs = gr.HTML("", elem_id="card-box")
-
     search_button.click(
         fn=get_recipe,
         inputs=user_input,
