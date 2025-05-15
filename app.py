@@ -66,8 +66,15 @@ with gr.Blocks(
         with gr.Column():
             user_input = gr.Textbox(
                 label="Find Recipes",
-                placeholder="A simple chicken recipe ...")
-            search_button = gr.Button("Search")
+                placeholder="A simple chicken recipe ...",
+                lines=5
+            )
+            search_button = gr.Button(
+                "Search",
+                variant="primary",
+                elem_id="gradio-search-button",
+                size="lg"
+            )
         with gr.Row():
             outputs = gr.HTML("", elem_id="card-box")
     search_button.click(
