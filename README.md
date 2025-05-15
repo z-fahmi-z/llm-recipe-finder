@@ -1,6 +1,7 @@
 # Indonesian Recipe Finder
 A recipe finder powered by open-sourced LLMs 
 
+---
 ### 🧭 Guide
 
 All procedures needed to set up the vector search system for this application are located under the `/procedures` directory.  
@@ -15,6 +16,7 @@ A `sample.env` file is provided.
 
 Make a copy of it as `.env` and populate it with your API credentials before running the notebooks.
 
+---
 ### 🔧 Built With
 <div align="center">
 
