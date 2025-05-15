@@ -1,3 +1,10 @@
+#gradio-textbox{
+    width: 800px !important;
+}
+#gradio-search-button{
+    width: 85% !important;
+    margin: 0 auto 0 auto;
+}
 #card-box {
     height: 500px;
     overflow-y: auto;
