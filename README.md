@@ -1,6 +1,20 @@
 # Indonesian Recipe Finder
 A recipe finder powered by open-sourced LLMs 
 
+### 🧭 Guide
+
+All procedures needed to set up the vector search system for this application are located under the `/procedures` directory.  
+Follow the sequence of Jupyter Notebooks as instructed to ensure proper initialization and indexing.
+
+To execute the notebooks successfully, you will need API keys for:
+- [Hugging Face](https://huggingface.co/)
+- [DeepSeek](https://deepseek.com/)
+- [OpenAI](https://openai.com/) *(optional but supported)*
+
+A `sample.env` file is provided.  
+
+Make a copy of it as `.env` and populate it with your API credentials before running the notebooks.
+
 ### 🔧 Built With
 <div align="center">
 
