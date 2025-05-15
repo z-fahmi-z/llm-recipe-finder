@@ -4,7 +4,8 @@ A recipe finder powered by open-sourced LLMs
 ---
 ### 🧭 Guide
 
-All procedures needed to set up the vector search system for this application are located under the `/procedures` directory.  
+All procedures needed to set up the vector search system for this application are located under the `/procedures` directory. 
+
 Follow the sequence of Jupyter Notebooks as instructed to ensure proper initialization and indexing.
 
 To execute the notebooks successfully, you will need API keys for:
